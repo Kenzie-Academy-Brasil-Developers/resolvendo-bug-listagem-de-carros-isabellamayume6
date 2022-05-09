@@ -18,7 +18,7 @@ app.post("/cars", (request, response) => {
     id: uuidv4(),
   });
 
-  return response.status(201).json(cars).send();
+  return response.status(201).json(cars.reverse()[1]).send();
 });
 
 app.get("/cars", (request, response) => {
